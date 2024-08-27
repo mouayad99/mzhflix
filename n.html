@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mzh</title>
+    <style>
+        *{
+            
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: linear-gradient(#200016,#10001f);
+            height: 100vh;
+        
+            
+        }
+        a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        header{
+            position: fixed;
+            width: 95%;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px;
+           
+
+          
+        }
+        header .logo{
+            font-size: 30px;
+            color: #fff;
+        }
+        header ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            
+            gap: 30px;
+        }
+        header ul li{
+            margin-right: 30px;
+            list-style-type: none;
+        }
+        header ul li a{
+            padding: 6px 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+        header ul li a:hover, .active{
+            background: #ffffff;
+            color: aqua;
+            border-radius: 50%;
+            
+            
+        }
+        .main{
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .main::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 100px;
+            width: 100%;
+            background: linear-gradient(to top,#200016,transparent);
+        }
+        .main img {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+        #moon{
+            mix-blend-mode: screen;
+            transform: translateY(80px);
+        }
+        .nouvil{
+            color: #fff;
+            font-size: 20px;
+            text-transform: uppercase;
+            transform: translateY(-140px);
+        }
+        .content{
+            color: #fff;
+            padding: 30px;
+        }
+        .content h2{
+            margin: 20px;
+        }
+        .content p{
+            margin: 20px;
+        }
+       
+     
+
+
+
+
+
+
+
+
+
+
+</style>
+<style>
+ 
+
+
+
+</style>
+
+</head>
+<body>
+    <header>
+    
+        
+        <h2><a href="" class="logo">MOUAYAD</a></h2>
+        <ul>
+        <li><a href="#section_2" class="btn custom-btn smoothscroll mt-3">جميع المسلسلات</a></li>
+    </ul>
+    </header>
+
+
+
+        
+              
+
+
+
+
+
+
+
+
+
+
+    <section class="main">
+        <img src="https://i0.wp.com/nouvil.net/wp-content/uploads/2022/01/stars1.png?ssl=1" id="stars">
+        <h2 class="nouvil">MOUAYAD</h2>
+        <img src="https://i0.wp.com/nouvil.net/wp-content/uploads/2022/01/moon2.png?ssl=1" id="moon">
+        <img src="https://i0.wp.com/nouvil.net/wp-content/uploads/2022/01/mountains3.png?ssl=1" id="mountains3">
+        <img src="https://i0.wp.com/nouvil.net/wp-content/uploads/2022/01/mountains4.png?ssl=1" id="mountains4">
+        <img src="https://i0.wp.com/nouvil.net/wp-content/uploads/2022/01/river5.png?ssl=1" id="river">
+        <img src="https://i0.wp.com/nouvil.net/wp-content/uploads/2022/01/boat6.png?ssl=1" id="boat">
+        <img src="https://i0.wp.com/nouvil.net/wp-content/uploads/2022/01/mountains7.png?ssl=1" id="mountains7">
+    </section>
+   
+    <div class="content">
+        <h2>MOUAYAD</h2>
+        <p>Lorem ipsum dolor sit amet consectetur.</p><br>
+        <p>mouayad Lorem ipsum dolor sit amet consectetur.</p><br>
+        <p>mouayad</p><br>
+        <p>mouayad</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur.</p><br>
+        <p>mouayad Lorem ipsum dolor sit amet consectetur.</p><br>
+        <p>mouayad</p><br>
+        <p>mouayad</p><br>
+    </div>
+   
+<script src="https://kit.fontawesome.com/f8e1a90484.js" crossorigin="anonymous"></script>
+    <script>
+
+
+
+       let stars = document.getElementById('stars');
+let moon = document.getElementById('moon');
+let mountains3 = document.getElementById('mountains3');
+let mountains4 = document.getElementById('mountains4');
+let river = document.getElementById('river');
+let boat6 = document.getElementById('boat');
+let nouvil = document.querySelector('.nouvil');
+window.onscroll = function(){
+    let value = scrollY;
+    stars.style.left = value + 'px';
+    moon.style.top = value *4 + 'px';
+    mountains3.style.top = value * 2 + 'px';
+    mountains4.style.top = value * 1.5 + 'px';
+    river.style.top = value  + 'px';
+    boat.style.top = value  + 'px';
+    boat.style.left = value * 3 + 'px';
+    nouvil.style.fontSize = value  + 'px';
+    if(scrollY >= 60){
+        nouvil.style.fontSize = 60  + 'px';
+        nouvil.style.position = 'fixed';
+        if(scrollY >= 420){
+            nouvil.style.display = 'none';
+        }else{
+            nouvil.style.display = 'block';
+        }
+        if(scrollY >= 100){
+            document.querySelector('.main').style.background = 'linear-gradient(#376281,#10001f)'
+        }else{
+              document.querySelector('.main').style.background = 'linear-gradient(#200016,#10001f)'
+        }
+    }
+}
+    </script>
+   
+   
+
+
+
+
+
+   <br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <section class="latest-podcast-section section-padding pb-0" id="section_2">
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-12 col-12">
+                    <div class="section-title-wrap mb-5">
+                        <h4 class="section-title">جميع المسلسلات</h4>
+                    </div>
+                </div>
+
+    
+                <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+            <div class="custom-block custom-block-overlay">
+                <a href="https://mouayad1.blogspot.com/" class="custom-block-image-wrap">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdYUgXwYZRuqh13Cf7vS6oOu24VC6enr8e1VSK8jLEwf_dOSBIBf9zImA2aq0Wod_rj6C8rGpQI8-dM8p4s3XyBpbQmSG4vF2YrzucEVGnnbcym-S9FM2383ReDeoWjY7wR8LxO5tw34uhqKy7IWQOGl0c2Pm27pnCQQYzZt3nP_hItzzLUQd44A22pCAO/s400/%D8%AA%D9%86%D8%B2%D9%8A%D9%84.jpg" class="custom-block-image img-fluid" alt="حياة قلبي الجزء  6">
+                </a>
+
+                <div class="custom-block-info custom-block-overlay-info">
+                    <h5 class="mb-1">
+                       <a href="https://mouayad1.blogspot.com/" class="btn custom-btn smoothscroll mt-3">
+                            حياة قلبي 6
+                        </a>
+                    </h5>
+
+                    <p class="badge mb-0"> الحلقه 1</p>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
